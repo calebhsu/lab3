@@ -1,0 +1,38 @@
+January 28, 2015 - CSCI 3308 Lab (Git Version Control)
+
+Create new repo on GitHub
+
+/* First Commit */
+Modify README, then
+	git status
+	git add README.md
+	git status 					// check if it's added
+	git commit -m "commit message here"
+	git push -u origin master			// if remote isn't added, do git remote add origin https://github.com/urlhere	
+
+/* Creating Tags */
+	git tag -a Practice_Tag_1 -m "first tag"
+	git push --tags
+Modify README after pushing tags
+	commit and push
+
+/* Branching */
+	git branch "Testing_New_Files"
+Switch to branch by typing
+	git checkout Testing_New_Files			// moves to branch (no longer on master)
+	git status					// displays which branch you're on
+Create a new text file
+	git commit -m "New branch testing file"
+	git push --all					// pushes files on all branches
+	git checkout master				// switches to master branch
+Create a new file in master branch
+	git commit -m "Added file to master"
+	git push 
+
+/* Merging Files */
+	git merge Testing_New_Files -m "Merged branch into master"
+	git push
+
+To pull from remote repository, 
+	git pull
+
